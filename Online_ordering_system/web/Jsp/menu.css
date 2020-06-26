@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+    user-select: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("Pictures/dining_room_photo.jpeg");
+    background-size: 100%;
+}
+.loginFrame{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    top: 140px;
+    background: white;
+    opacity: 91%;
+    border-radius: 20px;
+    -moz-box-shadow:0 0 30px black;
+    -webkit-box-shadow:0 0 30px black;
+    box-shadow:0 0 30px black;
+    
+}
+.choose{
+    position: relative;
+    top: 70px;
+    width: 62%;
+    height: 14%;
+    border: 1px solid black;
+    border-radius: 15px;
+    -moz-box-shadow:0 0 2px #06c;
+    -webkit-box-shadow:0 0 2px #06c;
+    box-shadow:0 0 2px #06c;
+    background-image: url("Pictures/choose.gif");
+    background-size: 100%;
+    
+}
+.contralLogin{
+    top: 100px;
+}
+.register{
+    top: 130px;
+}
+.aboutLogin{
+    top: 160px;
+}
+.choose:hover{
+    transform: scale(1.1);
+    -moz-box-shadow:0 0 20px #06c;
+    -webkit-box-shadow:0 0 20px #06c;
+    box-shadow:0 0 20px #06c;
+}
+font{
+    outline-style: none;
+    user-select: none;
+}
+font{
+    position: relative;
+    top: 15px;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    /*font-weight: 5px;*/
+    text-align: center;
+}
+
+
+

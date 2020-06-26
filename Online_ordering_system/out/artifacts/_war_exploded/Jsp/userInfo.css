@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+    user-select: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("Pictures/caption5.jpg");
+    background-size: 100%;
+}
+.Frame{
+    position: relative;
+    top: 90px;
+    border: 1px solid black;
+    width: 500px;
+    height:auto !important;
+    height:550px;
+    min-height:550px;
+    background: white;
+    border-radius: 20px;
+    -moz-box-shadow:0 0 30px black;
+    -webkit-box-shadow:0 0 30px black;
+    box-shadow:0 0 30px black;
+    opacity: 89%;
+}
+font{
+    font-size: 45px;
+    outline-style: none;
+    user-select: none;
+    color: blue;
+    font-weight: 5px;
+}
+hr{
+    width: 90%;
+    height: 3px;
+    border: 0;
+    background: red;
+    opacity: 90%;
+}
+.Input{
+    width: 350px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 25px;
+    outline: none;
+    text-align: center;
+}
+.Input:hover{
+    transform: scale(1.1);
+    -moz-box-shadow:0 0 20px #06c;
+    -webkit-box-shadow:0 0 20px #06c;
+    box-shadow:0 0 20px #06c;
+}
+.sub{
+    width: 164px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 30px;
+    outline: none;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+    <package name="One" extends="struts-default" namespace="/">
+        <global-allowed-methods>
+            regex:.*
+        </global-allowed-methods>
+
+        <action name="UserJudge" class="Action.Register_Judge">
+            <result name="success" type="chain">UserInsert</result>
+            <result name="input">/Jsp/register.jsp</result>
+        </action>
+        <action name="UserInsert" class="Action.UserInsert" method="Insert">
+            <result name="success">/Jsp/login.jsp</result>
+        </action>
+
+        <action name="UserLogin" class="Action.User_Login_Judge" method="Login_Judge">
+            <result name="success">/Jsp/table.jsp</result>
+            <result name="login">/Jsp/login.jsp</result>
+        </action>
+
+        <action name="tableNum" class="Action.tableNum" method="Delete">
+            <result name="success" type="chain">Select_Menue</result>
+        </action>
+        <action name="Select_Menue" class="Action.Select_Menue">
+            <result name="success">/Jsp/chooseFood.jsp</result>
+        </action>
+
+        <action name="Ordering_Menue" class="Action.Ordering_Menue" method="Insert">
+            <result name="success" type="chain">Ordering_Menue2</result>
+        </action>
+        <action name="Ordering_Menue2" class="Action.Ordering_Menue" method="Select">
+            <result name="success">/Jsp/myFood.jsp</result>
+        </action>
+
+        <action name="Insert_Allprice" class="Action.Insert_Allprice" method="Insert">
+            <result name="success">/Jsp/success.jsp</result>
+        </action>
+
+        <action name="Update_myFood" class="Action.Delete_Update_myFood" method="Update">
+            <result name="success" type="chain">Update_myFood_Two</result>
+        </action>
+        <action name="Update_myFood_Two" class="Action.Ordering_Menue" method="Select">
+            <result name="success">/Jsp/myFood.jsp</result>
+        </action>
+
+        <action name="Delete_myFood" class="Action.Delete_Update_myFood" method="Delete">
+            <result name="success" type="chain">Delete_myFood_Two</result>
+        </action>
+        <action name="Delete_myFood_Two" class="Action.Ordering_Menue" method="Select">
+            <result name="success">/Jsp/myFood.jsp</result>
+        </action>
+
+        <action name="Key_find" class="Action.Key_Find">
+            <result name="success">/Jsp/Key_Find_Food.jsp</result>
+        </action>
+
+        <action name="Manager_Order" class="Action.tableNum" method="TableID">
+            <result name="success" type="chain">Manager_Order_Two</result>
+        </action>
+        <action name="Manager_Order_Two" class="Action.Ordering_Menue" method="Select">
+            <result name="success">/Jsp/myFood3.jsp</result>
+        </action>
+
+        <action name="Manager_Cust_Cost" class="Action.Manager" method="Select">
+            <result name="success">/Jsp/customerCost.jsp</result>
+        </action>
+
+        <action name="Manager_Judge" class="Action.Manager_Judge">
+            <result name="success" type="chain">Manager_Judge_Two</result>
+            <result name="input">/Jsp/contralLogin.jsp</result>
+        </action>
+        <action name="Manager_Judge_Two" class="Action.Manager_Login_And_Update" method="Manager_Login_Judge">
+            <result name="success">/Jsp/contralMenu.jsp</result>
+            <result name="login">/Jsp/contralLogin.jsp</result>
+        </action>
+
+        <action name="Manager_Old_Password" class="Action.Manager_Login_And_Update" method="Old_Password_Judge">
+            <result name="success">/Jsp/contralInfo2.jsp</result>
+            <result name="login">/Jsp/contralInfo.jsp</result>
+        </action>
+
+
+        <action name="Manager_Update_Info" class="Action.Manager_Judge_Two">
+            <result name="success" type="chain">Manager_Update_Two</result>
+            <result name="input">/Jsp/contralInfo2.jsp</result>
+        </action>
+        <action name="Manager_Update_Two" class="Action.Manager_Login_And_Update" method="Manager_Info_Update">
+            <result name="success">/Jsp/order.jsp</result>
+            <result name="error">/Jsp/contralInfo2.jsp</result>
+        </action>
+
+        <action name="Manager_Alter_Food" class="Action.tableNum" method="Save_Kind_Name">
+            <result name="success" type="chain">Manager_Alter_Food_Two</result>
+        </action>
+        <action name="Manager_Alter_Food_Two" class="Action.tableNum" method="Kind_Name">
+            <result name="success">/Jsp/alterMenu.jsp</result>
+        </action>
+
+
+        <action name="Manager_Menu_Delete" class="Action.Manager_Menu" method="Delete">
+            <result name="success" type="chain">Manager_Menu_Delete_Two</result>
+        </action>
+        <action name="Manager_Menu_Delete_Two" class="Action.Select_Menue">
+            <result name="success" type="chain">Manager_Menu_Delete_Three</result>
+        </action>
+        <action name="Manager_Menu_Delete_Three" class="Action.tableNum" method="Kind_Name">
+            <result name="success">/Jsp/alterMenu.jsp</result>
+        </action>
+
+        <action name="Manager_Menu_Update" class="Action.Manager_Menu" method="Update">
+            <result name="success" type="chain">Manager_Menu_Update_Two</result>
+        </action>
+        <action name="Manager_Menu_Update_Two" class="Action.Select_Menue">
+            <result name="success" type="chain">Manager_Menu_Update_Three</result>
+        </action>
+        <action name="Manager_Menu_Update_Three" class="Action.tableNum" method="Kind_Name">
+            <result name="success">/Jsp/alterMenu.jsp</result>
+        </action>
+
+        <action name="User_Info_Update" class="Action.Register_Judge">
+            <result name="success" type="chain">User_Info_Update_Two</result>
+            <result name="input">/Jsp/userInfo.jsp</result>
+        </action>
+        <action name="User_Info_Update_Two" class="Action.UserInsert" method="Update">
+            <result name="success">/Jsp/updateSuccess.jsp</result>
+        </action>
+
+        <action name="Manager_Menu_Sort" class="Action.Manager" method="Manager_Menu_Sort">
+            <result name="success">/Jsp/sort.jsp</result>
+        </action>
+
+
+        <action name="Write_Txt" class="Action.Write_Txt" method="Write">
+            <result name="success">/Jsp/myFood2.jsp</result>
+        </action>
+    </package>
+
+    <package name="File_Upload_Package" extends="struts-default">
+        <!-- 定义action -->
+        <action name="File_UploadAction" class="File_Upload.UploadAction">
+            <!-- 显示成功的jsp页面 -->
+            <result name="success" type="chain">File_UploadAction_Two</result>
+            <!-- 文件上传拦截器，限制运行上传的文件的类型，还有其他一个方法，这是其中一个 -->
+            <interceptor-ref name="defaultStack">
+                <!-- 限制运行的文件的扩展名 fileUpload.allowedExtensions固定写法-->
+                <param name="fileUpload.allowedExtensions">txt,jpg,gif,png</param>
+            </interceptor-ref>
+            <!-- 错误提示，档文件上传出现错误的时候，struts内部会返回input视图，
+22               错误视图，所以就需要我们在struts.xml中配置Input视图对应的错误页面 -->
+            <result name="input">/error.jsp</result>
+        </action>
+        <action name="File_UploadAction_Two" class="Action.Select_Menue">
+            <result name="success" type="chain">File_UploadAction_Three</result>
+        </action>
+        <action name="File_UploadAction_Three" class="Action.tableNum" method="Kind_Name">
+            <result name="success">/Jsp/alterMenu.jsp</result>
+        </action>
+    </package>
+</struts>

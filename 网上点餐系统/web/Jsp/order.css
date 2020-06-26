@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.Frame{
+    position: relative;
+    top: 20px;
+    width: 1000px;
+    height: 700px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: white;
+    opacity: 95%;
+    -moz-box-shadow:0 0 30px black;
+    -webkit-box-shadow:0 0 30px black;
+    box-shadow:0 0 30px black;
+    background-image: url("Pictures/123.jpg");
+    background-size: 100%;
+}
+.table{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    display: block;
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 150px;
+    border: 3px solid black;
+    border-radius: 20px;
+    background-image: url("Pictures/table2.jpg");
+    background-size: 100%;
+    box-sizing: border-box;
+    margin-left: 35px;
+    margin-top: 55px;
+}
+.table:hover{
+    transform: scale(1.1);
+    border: 5px solid red;
+}
+font{
+    width: 100%;
+    height: 100%;
+    font-size: 110px;
+    color: black;
+}

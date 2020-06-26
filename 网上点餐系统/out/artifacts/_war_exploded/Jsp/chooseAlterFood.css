@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+    user-select: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-image: url("Pictures/caption6.jpg");
+    background-size: 100%;
+}
+.Frame{
+    position: relative;
+    top: 20px;
+    width: 900px;
+    height: 700px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: white;
+    opacity: 95%;
+    -moz-box-shadow:0 0 30px black;
+    -webkit-box-shadow:0 0 30px black;
+    box-shadow:0 0 30px black;
+    background-image: url("Pictures/chooseAlterFood.gif");
+    /* background-image: url("C:/Users/20977/Desktop/餐厅自助点餐系统/图片/caption7.jpg"); */
+    background-size: 100%;
+}
+.Food{
+    position: relative;
+    left: 10px;
+    display: block;
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 20px;
+
+    background-size: 100%;
+    box-sizing: border-box;
+    margin-left: 35px;
+    margin-top: 40px;
+    -webkit-text-stroke: 2px white;
+    z-index: 10;
+}
+
+.Food:hover{
+    transform: scale(1.1);
+    border: 5px solid red;
+    -moz-box-shadow:0 0 30px black;
+    -webkit-box-shadow:0 0 30px black;
+    box-shadow:0 0 30px black;
+}
+font{
+    width: 100%;
+    height: 100%;
+    font-size: 90px;
+    color: red;
+    font-family: "楷体";
+}
+a{
+    text-decoration: none;
+}
+.Food01{
+    margin-left: 100px;
+}
+.Food04{
+    margin-left: 220px;
+}
+
+.image{
+    position: relative;
+    top: 185px;
+    left: -670px;
+    width: 210px;
+    z-index: 0;
+    border-radius: 20px;
+}
